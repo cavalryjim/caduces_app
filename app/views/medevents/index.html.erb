@@ -1,0 +1,82 @@
+<h1>Listing medevents</h1>
+
+<!-- TIMEGLIDER PLACEMENT: Put the intended location for the timeline  
+     directly above the data table -->
+<div id='placement'></div>
+
+<table class='timeline-table' id="myMedEvents" focus_date="2011-05-15"
+title="my life" initial_zoom="48" description="The Wild and Wooly times of James Davis.">
+<!-- The first row of the table is reserved for meta-data.
+    
+     Class values below are *critical* for mapping out data from the 
+     <td> elements that follow ---  though order is not important.
+     The text in <td> elements is *not* critical: just the class names.
+-->
+<tr>
+  <th class="tg-startdate">start date</th>
+  <th class="tg-enddate">end date</th>
+  <th class="tg-title">title</th>
+  <th class="tg-description">description</th>
+  <th class="tg-icon">icon</th>
+  <th class="tg-importance">importance</th>
+  <th class="tg-link">link</th>	
+</tr>
+
+
+<% @medevents.each do |medevent| %>
+  <tr>
+    <td><%= medevent.start_date %></td>
+    <td><%= medevent.end_date %></td>
+    <td><%= medevent.title %></td>
+    <td><%= medevent.description %></td>
+	<td>circle_green.png</td>
+    <td><%= medevent.importance %></td>
+	<td>http://www.sabotsolutions.com</td>
+    <!--><td><%= link_to 'Show', medevent %></td>
+    <td><%= link_to 'Edit', edit_medevent_path(medevent) %></td>
+    <td><%= link_to 'Destroy', medevent, :confirm => 'Are you sure?', :method => :delete %></td>-->
+  </tr>
+<% end %>
+</table>
+
+<br />
+<script>
+
+	$(document).ready(function () { 
+
+		var tg1 = $("#placement").timeline({
+				"min_zoom":25, 
+				"max_zoom":50, 
+				"initial_timeline_id": "jshist",
+				"data_source":"#myMedEvents"
+		});
+		
+    }); // end document-ready
+	
+</script>
+
+
+<!-- 3rd party libs -->
+<script src="/javascripts/timeglider.min.js" type="text/javascript" charset="utf-8"></script>
+
+
+<script type='text/javascript'>
+	$(document).ready(function () {
+		$("li#table").addClass("nav-active");
+	});
+
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-8964270-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+<%= link_to 'New Medevent', new_medevent_path %>

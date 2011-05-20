@@ -1,0 +1,37 @@
+<%= form_for(@medevent) do |f| %>
+  <% if @medevent.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@medevent.errors.count, "error") %> prohibited this medevent from being saved:</h2>
+
+      <ul>
+      <% @medevent.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :importance %><br />
+    <%= f.text_field :importance %>
+  </div>
+  <div class="field">
+    <%= f.label :start_date %><br />
+    <%= f.date_select :start_date %>
+  </div>
+  <div class="field">
+    <%= f.label :end_date %><br />
+    <%= f.date_select :end_date %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

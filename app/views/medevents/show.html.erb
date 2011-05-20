@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @medevent.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @medevent.description %>
+</p>
+
+<p>
+  <b>Importance:</b>
+  <%= @medevent.importance %>
+</p>
+
+<p>
+  <b>Start date:</b>
+  <%= @medevent.start_date %>
+</p>
+
+<p>
+  <b>End date:</b>
+  <%= @medevent.end_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_medevent_path(@medevent) %> |
+<%= link_to 'Back', medevents_path %>
