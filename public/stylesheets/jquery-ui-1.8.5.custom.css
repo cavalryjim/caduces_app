@@ -514,20 +514,20 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
  */
 .ui-slider { position: relative; text-align: left; border: 0px none; }
 .ui-state-focus .ui-slider-handle { border: 0px none; }
-.ui-slider .ui-slider-handle { background: url(images/slider_handles.png) 0px -23px no-repeat; position: absolute; z-index: 2; width: 23px; height: 23px; cursor: pointer; }
+.ui-slider .ui-slider-handle { background: url(../images/images/slider_handles.png) 0px -23px no-repeat; position: absolute; z-index: 2; width: 23px; height: 23px; cursor: pointer; }
 .ui-slider .ui-state-hover { background-position: 0px 0px !important; }
 .ui-slider .ui-slider-range { position: absolute; z-index: 1; font-size: .7em; display: block; border: 0; }
 .ui-slider .ui-state-default { border: 0px none; }
 
-.ui-slider-horizontal { height: 5px; background: url(images/slider_h_bg.gif) 0px 0px repeat-x;}
+.ui-slider-horizontal { height: 5px; background: url(../images/images/slider_h_bg.gif) 0px 0px repeat-x;}
 .ui-slider-horizontal .ui-slider-handle { top: -9px; margin-left: -12px; }
-.ui-slider-horizontal .ui-slider-range { top: 0; height: 100%; background: url(images/slider_h_bg.gif) 0px -5px repeat-x; }
+.ui-slider-horizontal .ui-slider-range { top: 0; height: 100%; background: url(../images/images/slider_h_bg.gif) 0px -5px repeat-x; }
 .ui-slider-horizontal .ui-slider-range-min { left: 0; }
 .ui-slider-horizontal .ui-slider-range-max { right: 0; }
 
-.ui-slider-vertical { width: 5px; height: 100px; background: url(images/slider_v_bg.gif) -5px 0px repeat-y; }
+.ui-slider-vertical { width: 5px; height: 100px; background: url(../images/images/slider_v_bg.gif) -5px 0px repeat-y; }
 .ui-slider-vertical .ui-slider-handle { left: -.3em; margin-left: -.6em; margin-bottom: -.6em; }
-.ui-slider-vertical .ui-slider-range { left: 0; width: 100%; background: url(images/slider_v_bg.gif) 0px 0px repeat-y; }
+.ui-slider-vertical .ui-slider-range { left: 0; width: 100%; background: url(../images/images/slider_v_bg.gif) 0px 0px repeat-y; }
 .ui-slider-vertical .ui-slider-range-min { bottom: 0; }
 .ui-slider-vertical .ui-slider-range-max { top: 0; }
 
@@ -563,7 +563,7 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
  *
  * http://docs.jquery.com/UI/Datepicker#theming
  */
-.ui-datepicker { width: 17em; padding: .2em .2em 0; background: #FFFFFF url(images/datepicker.gif) left top repeat-x; -moz-box-shadow: 0px 5px 10px rgba(0,0,0,0.8); -webkit-box-shadow: 0px 5px 10px rgba(0,0,0,0.8); box-shadow: 0px 5px 10px rgba(0,0,0,0.8); }
+.ui-datepicker { width: 17em; padding: .2em .2em 0; background: #FFFFFF url(../images/images/datepicker.gif) left top repeat-x; -moz-box-shadow: 0px 5px 10px rgba(0,0,0,0.8); -webkit-box-shadow: 0px 5px 10px rgba(0,0,0,0.8); box-shadow: 0px 5px 10px rgba(0,0,0,0.8); }
 .ui-datepicker .ui-datepicker-header { position:relative; padding:2px 0px 6px 0px; background: transparent; -moz-border-radius: 0px; -webkit-border-radius: 0px; border-radius: 0px; border: 0px none; }
 .ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next { position:absolute; top: 6px; width: 16px; height: 16px; border: 0px none; cursor: pointer; }
 .ui-datepicker .ui-datepicker-prev-hover, .ui-datepicker .ui-datepicker-next-hover { top: 1px; }
@@ -640,5 +640,5 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
  *
  * http://docs.jquery.com/UI/Progressbar#theming
  */
-.ui-progressbar { height: 12px; text-align: left; background: url(images/progress_bar.gif) 0px -14px repeat-x; }
-.ui-progressbar .ui-progressbar-value {margin: -1px; height:100%; background: url(images/progress_bar.gif) 0px 0px repeat-x; }
+.ui-progressbar { height: 12px; text-align: left; background: url(../images/images/progress_bar.gif) 0px -14px repeat-x; }
+.ui-progressbar .ui-progressbar-value {margin: -1px; height:100%; background: url(../images/images/progress_bar.gif) 0px 0px repeat-x; }

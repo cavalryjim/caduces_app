@@ -90,7 +90,9 @@
         if (!ev.icon || ev.icon === "none") {
           ev.icon = "";
         }  else {
-          ev.icon = widget_options.icon_folder + ev.icon;
+          //ev.icon = widget_options.icon_folder + ev.icon;
+        	// JDavis: had to remove the line above 
+        	ev.icon = ev.icon;
         }
             
         ev.titleWidth = tg.getStringWidth(ev.title);

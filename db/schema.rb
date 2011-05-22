@@ -12,6 +12,15 @@
 
 ActiveRecord::Schema.define(:version => 20110520151913) do
 
+  create_table "histories", :force => true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.datetime "startdate"
+    t.datetime "enddate"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "medevents", :force => true do |t|
     t.string   "title"
     t.string   "description"

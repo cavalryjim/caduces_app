@@ -47,7 +47,7 @@
         basic_fontsize:12, 
         mouse_wheel: "zoom", 
         initial_timeline_id:'',
-        icon_folder:'js/timeglider/icons/',
+        icon_folder:'../images/timeglider/icons/',
         show_footer:true,
         display_zoom_level:true
       },
@@ -90,9 +90,9 @@
                               "</div>"+
                               "<div class='timeglider-footer'>"+
                               "<div class='timeglider-logo'></div>"+                      
-                              "<img class='timeglider-filter-bt' title='filter' src='js/timeglider/buttons/filter.png'>"+
-                              "<img class='timeglider-tools-bt' title='settings' src='js/timeglider/buttons/tools.png'>"+
-                              "<img class='timeglider-list-bt' title='timelines' src='js/timeglider/buttons/list.png'>"+  
+                              "<img class='timeglider-filter-bt' title='filter' src='images/timeglider/buttons/filter.png'>"+
+                              "<img class='timeglider-tools-bt' title='settings' src='images/timeglider/buttons/tools.png'>"+
+                              "<img class='timeglider-list-bt' title='timelines' src='images/timeglider/buttons/list.png'>"+  
                               "</div>"+
                               "<div class='timeglider-event-hover-info'></div>"+
                             "</div><span id='timeglider-measure-span'></span>";

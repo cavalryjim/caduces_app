@@ -29,9 +29,9 @@ title="my life" initial_zoom="48" description="The Wild and Wooly times of James
     <td><%= medevent.end_date %></td>
     <td><%= medevent.title %></td>
     <td><%= medevent.description %></td>
-	<td>circle_green.png</td>
+	<td>images/timeglider/icons/circle_green.png</td>
     <td><%= medevent.importance %></td>
-	<td>http://www.sabotsolutions.com</td>
+	<td><%= edit_medevent_path(medevent) %></td>
     <!--><td><%= link_to 'Show', medevent %></td>
     <td><%= link_to 'Edit', edit_medevent_path(medevent) %></td>
     <td><%= link_to 'Destroy', medevent, :confirm => 'Are you sure?', :method => :delete %></td>-->
@@ -39,25 +39,68 @@ title="my life" initial_zoom="48" description="The Wild and Wooly times of James
 <% end %>
 </table>
 
-<br />
-<script>
+
+<!-- 3rd party libs -->
+    <script src="javascripts/jquery-1.4.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="javascripts/jquery-ui-1.8.9.custom.min.js" type="text/javascript" charset="utf-8"></script>
+
+    <!-- FRIEND LIBS -->
+    <script src="javascripts/underscore-min.js" type="text/javascript" charset="utf-8"></script>
+
+	<script src="javascripts/backbone-min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="javascripts/jquery.global.js" type="text/javascript" charset="utf-8"></script>
+	<script src="javascripts/jquery.tmpl.js" type="text/javascript" charset="utf-8"></script>
+	<script src="javascripts/ba-debug.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="javascripts/ba-tinyPubSub.js" type="text/javascript" charset="utf-8"></script>
+	<script src="javascripts/jquery.mousewheel.min.js" type="text/javascript" charset="utf-8"></script>
+
+	<script src="javascripts/jquery.ui.ipad.js" type="text/javascript" charset="utf-8"></script>
+	<script src="javascripts/raphael-min.js" type="text/javascript" charset="utf-8"></script>
+
+	    
+	<!-- TIMEGLIDER -->
+	<script src="javascripts/timeglider/TG_Date.js" type="text/javascript" charset="utf-8"></script>
+    <script src="javascripts/timeglider/TG_Org.js" type="text/javascript" charset="utf-8"></script>
+	<script src="javascripts/timeglider/TG_Timeline.js" type="text/javascript" charset="utf-8"></script> 
+	<script src="javascripts/timeglider/TG_TimelineView.js" type="text/javascript" charset="utf-8"></script>
+
+	<script src="javascripts/timeglider/TG_Mediator.js" type="text/javascript" charset="utf-8"></script> 
+	<script src="javascripts/timeglider/timeglider.timeline.widget.js" type="text/javascript" charset="utf-8"></script>
+
+  <script>
 
 	$(document).ready(function () { 
-
+		
+		var tld = "timeline";
+		
 		var tg1 = $("#placement").timeline({
-				"min_zoom":25, 
-				"max_zoom":50, 
-				"initial_timeline_id": "jshist",
+				"min_zoom":18, 
+				"max_zoom":55, 
+				// data source is the id of the table!
 				"data_source":"#myMedEvents"
 		});
+		
+		
+		$("#toggle").click(function () { 
+			if (tld == "timeline") {
+				$("#placement").css({"display":"none"});
+				$(".timeline-table").css({"display":"block"});
+				tld = "table";
+			} else {
+				$("#placement").css({"display":"block"});
+				$(".timeline-table").css({"display":"none"});
+				
+				tld = "timeline";
+			}
+			
+		});
+		
 		
     }); // end document-ready
 	
 </script>
 
-
-<!-- 3rd party libs -->
-<script src="/javascripts/timeglider.min.js" type="text/javascript" charset="utf-8"></script>
+    
 
 
 <script type='text/javascript'>
@@ -78,5 +121,5 @@ title="my life" initial_zoom="48" description="The Wild and Wooly times of James
 
 </script>
 
-
+</br>
 <%= link_to 'New Medevent', new_medevent_path %>

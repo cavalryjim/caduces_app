@@ -160,7 +160,7 @@
 	font-size:11px;
 	background-color:#75a3c7; 
 	/* A line as bg doesn't alter the width of the div!*/
-	background-image:url("img/dotted.png");
+	background-image:url("../images/timeglider/img/dotted.png");
 	background-repeat:no-repeat;
 }
 
@@ -230,7 +230,7 @@
 	margin-top:-16px;
 	width:30px;
 	height:30px;
-	background-image:url(buttons/close.png);
+	background-image:url(../images/timeglider/buttons/close.png);
 }
 
 .timeglider-close-button-small {
@@ -239,7 +239,7 @@
 
 	width:15px;
 	height:15px;
-	background-image:url(buttons/close_small.png);
+	background-image:url(../images/timeglider/buttons/close_small.png);
 	margin-top:-8px;
 	margin-right:-7px;
 }
@@ -417,14 +417,14 @@
 	margin-top:-16px;
 	width:30px;
 	height:30px;
-	background-image:url(buttons/close.png);
+	background-image:url(../images/timeglider/buttons/close.png);
 }
 	
 
 .timeglider-menu-modal-point-right {
     width:20px;
     height:20px;
-    background-image:url("img/menu-pointer-right.png");
+    background-image:url("../images/timeglider/img/menu-pointer-right.png");
     background-repeat:no-repeat;
     position:absolute;
     bottom:-20px;
@@ -448,11 +448,11 @@
     cursor:pointer;
 }
 .timeglider-pan-left {
-  background-image:url("buttons/pan_left.png");
+  background-image:url("../images/timeglider/buttons/pan_left.png");
   margin-right:1px;
 }
 .timeglider-pan-right {
-  background-image:url("buttons/pan_right.png");
+  background-image:url("../images/timeglider/buttons/pan_right.png");
 }
 /* add hover effects? */
 
@@ -462,7 +462,7 @@
     float:left;
     width:162px;
     height:20px;
-    background-image:url("img/timeglider.png");
+    background-image:url("../images/timeglider/img/timeglider.png");
     background-repeat:no-repeat;
     margin-top:4px;
     margin-left:12px;
@@ -471,7 +471,7 @@
 .timeglider-menu-modal-point-left {
     width:20px;
     height:20px;
-    background-image:url("img/menu-pointer-left.png");
+    background-image:url("../images/timeglider/img/menu-pointer-left.png");
     background-repeat:no-repeat;
     position:absolute;
     bottom:-20px;
