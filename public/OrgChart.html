@@ -10,12 +10,12 @@
         data.addColumn('string', 'Manager');
         data.addColumn('string', 'ToolTip');
         data.addRows([
-          [{v:'1', f:'Mikey<div style="color:red; font-style:italic">President</div>'}, '', 'The President'],
-          [{v:'Jim', f:'Jim<div style="color:red; font-style:italic">Vice President</div>'}, '1', 'VP'],
-          ['Alice', '1', ''],
-          ['Bob', '1', 'Hover text'],
+          ['James', 'Bob', ''],
           ['Carol', 'Bob', ''],
-          ['James', 'Bob', '']
+          ['Bob', '1', 'Hover text'],
+          ['Alice', '1', ''],
+          [{v:'Jim', f:'Jim<div style="color:red; font-style:italic">Vice President</div>'}, '1', 'VP'],
+          [{v:'1', f:'Mikey<div style="color:red; font-style:italic">President</div>'}, '', 'The President']
         ]);
         var chart = new google.visualization.OrgChart(document.getElementById('chart_div'));
         chart.draw(data, {allowHtml:true});
