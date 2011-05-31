@@ -30,11 +30,11 @@ function init(){
     //init data
     var json = {
         id: "node02",
-        name: "0.2",
+        name: "James",
         data: {},
         children: [{
             id: "node13",
-            name: "1.3",
+            name: "Junior",
             data: {},
             children: [{
                 id: "node24",
