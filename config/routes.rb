@@ -1,4 +1,8 @@
 CaducesApp::Application.routes.draw do
+  resources :people
+
+  get "people/new"
+
   resources :medevents
 
   # The priority is based upon order of creation:
