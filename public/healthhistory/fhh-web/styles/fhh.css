@@ -1,0 +1,1856 @@
+
+/*
+// --------------------------------------------------------------------------------------------------------------------
+// U.S. DEPARTMENT OF HEALTH AND HUMAN SERVICES (HHS)
+// MY FAMILY HEALTH PORTRAIT (FHH)
+// https://familyhistory.hhs.gov/ - Version 3.0
+// This style sheet is organized in the following sections
+// -- Basic HTML Element Styles
+// -- Page Layout Containers + Styles
+// -- Submodal + Popup + Dialogue Layout Containers + Styles + Wizard
+// -- Form + Data Table Containers + Styles
+// -- Miscellaneous Styles
+// --------------------------------------------------------------------------------------------------------------------
+*/
+
+/* ************************************* */
+/* ----- BASIC HTML ELEMENT STYLES ----- */
+/* ************************************* */
+
+/* ALL PAGES: makes pages that don't scroll the same width as pages that do scroll */
+:root { 
+overflow-y:scroll; 
+}
+
+body {
+    background: #ECE0D3 url(../images/bkgd_paleOrange.jpg) repeat-x top;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 86%;
+    padding: 10px;
+    text-align: center;
+    min-width:900px; 
+}
+
+* html #wrapper /* IE6 min-width dynamic expression (hack) */
+{ width:expression(document.body.clientWidth <=900 ? "900px" : "100%" ); }
+
+p {
+    font-size: 1.0em;
+}
+
+h1 {
+    color: #119DBB;
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    font-style: normal;
+    font-weight: bold;
+    margin: 1em 0em 0em 0em;
+}
+
+h2 {
+    color: #119DBB;
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 1.25em;
+    font-style: italic;
+    font-weight: bold;
+}
+
+h3 {
+    color: #119DBB;
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 1.15em;
+    font-style: normal;
+    font-weight: bold;
+}
+
+h4 {
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 1.0em;
+    font-weight: bold;
+}
+
+h5, h6 {
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 1.0em;
+    font-style: italic;
+    font-weight: normal;
+}
+
+a:link, a:visited {
+    color: #0000FF;
+    text-decoration: underline;
+}
+
+a:hover, a:active  {
+    color: #0000FF;
+    text-decoration: none;
+}
+
+li {
+}
+
+img, a img {
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+/*
+label {
+}
+*/
+
+hr {
+    background-color: #7BBCCA;
+    border: 0px;
+    color: #7BBCCA;
+    height: 1px;
+    margin: 5px 0px;
+}
+
+table {
+    background: #FFFFFF;
+    font-size: 1.0em;
+}
+
+tbody {
+}
+
+th {
+}
+
+td {
+}
+
+
+/* *********************************************** */
+/* ----- PAGE LAYOUT CONTAINERS + STYLES ----- */
+/* *********************************************** */
+
+/* HOMEPAGE: creates main container so everything can be grouped and centered on screen (top tabs, banner, primary nav, content, and footer). applied to <div>. */
+div.mainContainerHome {
+    margin: 0px 0px 10px 0px;
+    padding: 0px;
+    text-align: left;
+    vertical-align: top;
+}
+/* HOMEPAGE: centers container on screen. applied to <div>. */
+div.mainContainerHome div#main{
+    margin: 0 auto;
+    width: 860px;
+}
+/* SUBPAGES: creates main container so everything can be grouped and centered on screen (top tabs, header, primary nav, content, and footer). applied to <div>. */
+div.mainContainer {
+    margin: 0 auto 10px auto;
+    padding: 0px;
+    text-align: left;
+    vertical-align: top;
+    width: 90%;
+}
+
+.noscript_panel { 
+    background:#ffc; 
+    padding:5px 20px 20px 20px; 
+    border:8px solid #333; 
+    width:740px; 
+    height:160px; 
+    top:370px; 
+    left:50%;
+    margin-left:-400px; 
+    position:absolute; 
+    z-index:100000; 
+    opacity:0.94;
+    filter:alpha(opacity=94); 
+    -moz-box-shadow: 0 2px 12px rgba(0,0,0,0.2); 
+    -webkit-box-shadow: 0 2px 12px rgba(0,0,0,0.2); 
+}
+
+.noscript_panel H1 { 
+    color:#000; 
+    font-family:Arial,Helvetica,sans-serif; 
+}
+
+.noscript_panel H1 SPAN { 
+    margin-left:15px; 
+    font-size:12px; 
+}
+
+
+/* ----- HEADER CONTAINERS + STYLES ----- */
+/* HOMEPAGE: creates header container for utiliy nav. applied to <div>. */
+div.headerContainerHome {
+    margin: 0px;
+    padding: 0px;
+    text-align: right;
+    vertical-align: bottom;
+}
+
+/* SUBPAGES: creates header container for banner & main nav. applied to <div>. */
+div.headerContainer {
+    background-color: #FFFFFF;
+    border-top: 1px solid #003366;
+    border-right: 1px solid #003366;
+    border-bottom: 1px solid #000033;
+    border-left: 1px solid #003366;
+    margin: 0px;
+    padding: 0px;
+    vertical-align: top;
+}
+
+/* ----- BANNER CONTAINERS + STYLES ----- */
+/* HOMEPAGE: creates banner container for banner title within div.contentContainerHome. applied to <div>. */
+div.bannerHome {
+    height: 60px;
+    margin: 60px 0px 0px 25px;
+    padding: 0px;
+    position: absolute;
+    z-index: 20;
+}
+
+/* SUBPAGES: sets table layout for the banner within div.headerContainer. applied to <table>. */
+table.bannerTable {
+    background-color: #E29C1B;
+    border-bottom: 1px solid #003366;
+    height: 58px;
+    margin: 0px;
+    width: 100%;
+}
+
+/* SUBPAGES: sets alignment of imgBannerTitle within table.bannerLayout. applied to <td>. */
+.bannerTable td.bannerTdTitle {
+    padding: 0px;
+    text-align: left;
+}
+
+/* SUBPAGES: sets alignment of imgBannerPhotos within table.bannerLayout. applied to <td>. */
+.bannerTable td.bannerTdPhotos {
+    padding: 0px;
+    text-align: right;
+}
+
+/* SUBPAGES: sets banner title image. */
+img.fhhBannerTitle {
+    border: 0px;
+    margin: 0px;
+}
+
+/* SUBPAGES: sets banner family photos. */
+img.fhhBannerPhotos{
+    border: 0px;
+    margin: 0px;
+}
+
+/* ----- MAIN NAVIGATION CONTAINERS + TEXT STYLES ----- */
+
+/* HOMEPAGE: sets table layout for main navigation and utility navigation. applied to <table>. */
+div.headerContainerHome table.mainNavTable {
+    background-color: transparent;
+    border-right: 1px solid #003366;
+    display: inline-block;
+    margin: 0px;
+    text-align: right;
+}
+
+/* HOMEPAGE: sets table cell container for utility navigation. applied to <td>. */
+div.headerContainerHome table.mainNavTable td.utilNavTd {
+    background-image: url(../images/tab_left.gif);
+    background-position: left;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    padding: 0px 0px 0px 34px;
+    text-align: right;
+}
+
+/* SUBPAGES: sets table layout for main navigation and utility navigation. applied to <table>. */
+div.headerContainer table.mainNavTable {
+    background-color: #003366;
+    background-image: url(../images/bkgd_mainNav.gif);
+    background-repeat: repeat-x;
+    border-top: 1px solid #003366;
+    margin: 1px 0px 0px 0px;
+    width: 100%;
+}
+
+/* SUBPAGES: sets table cell container for main navigation. applied to <td>. */
+div.headerContainer table.mainNavTable td.mainNavTd {
+    padding: 0px;
+    text-align: left;
+    white-space: nowrap;
+    
+}
+
+/* SUBPAGES: sets table cell container for utility navigation. applied to <td>. */
+div.headerContainer table.mainNavTable td.utilNavTd {
+    padding: 0px;
+    text-align: right;
+    white-space: nowrap;
+}
+
+/* HOMEPAGE: creates individual menu items within utilNavTd. applies to <a>. */
+div.headerContainerHome table.mainNavTable td.utilNavTd a {
+    display: inline-block;
+    background-color: #003366;
+    background-image: url(../images/bkgd_utilNavHome.gif);
+    background-repeat: repeat-x;
+    color: #DAEFFB;
+    font-size: 1.0em;
+    font-weight: normal;
+    margin: 0px;
+    padding: 3px 12px 4px 12px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+/* SUBPAGES: creates individual menu items within utilNavTd. applies to <a>. */
+div.headerContainer table.mainNavTable td.utilNavTd a {
+    display: inline-block;
+    background-color: #003366;
+    background-image: url(../images/bkgd_utilNav.gif);
+    background-repeat: repeat-x;
+    border-left: 1px solid #9FBDDA;
+    border-right: 1px solid #7296BB;
+    color: #DAEFFB;
+    font-size: 1.0em;
+    font-weight: normal;
+    margin: 0px;
+    padding: 4px 12px 3px 12px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+/* SUBPAGES: creates individual menu items within mainNavTd. applies to <a>. */
+td.mainNavTd a {
+    display: inline-block;
+    background-color: #003366;
+    background-image: url(../images/bkgd_mainNav.gif);
+    background-repeat: repeat-x;
+    border-left: 1px solid #9FBDDA;
+    border-right: 1px solid #7296BB;
+    color: #DAEFFB;
+    font-size: 1.0em;
+    font-weight: normal;
+    margin: 0px;
+    padding: 4px 12px 3px 12px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+/* SUBPAGES: sets selected style for main navigation. applies to <a>. */
+td.mainNavTd a.selected {
+    background: #4cb7db url(../images/bkgd_mainNavSelected.gif) repeat-x top;
+    color:#000;
+}
+
+/* HOMEPAGE + SUBPAGES: sets basic style for text links within mainNavTd and utilNavTd. applies to <a href="">. */ 
+td.mainNavTd a:link, td.mainNavTd a:visited, 
+td.utilNavTd a:link, td.utilNavTd a:visited {
+    color: #DAEFFB;
+    text-decoration: none;
+}
+
+/* HOMEPAGE: sets hover style for text links within utilNavTd.  applies to <a href="">. */
+div.headerContainerHome table.mainNavTable td.utilNavTd a:hover {
+    background-image: url(../images/bkgd_utilNavHome_over.gif);
+    background-repeat: repeat-x;
+    color: #DAEFFB;
+    text-decoration: none;
+}
+
+/* SUBPAGES: sets hover style for text links within utilNavTd.  applies to <a href="">. */
+div.headerContainer table.mainNavTable td.utilNavTd a:hover {
+    background-image: url(../images/bkgd_utilNav_over.gif);
+    background-repeat: repeat-x;
+    color: #DAEFFB;
+    text-decoration: none;
+}
+
+/* SUBPAGES: sets hover style for text links within mainNavTd.  applies to <a href="">. */
+td.mainNavTd a:hover {
+    background-image: url(../images/bkgd_mainNav_over.gif);
+    background-repeat: repeat-x;
+    border-left: 1px solid #9FBDDA;
+    border-right: 1px solid #003366;
+    color: #DAEFFB;
+    text-decoration: none;
+}
+
+/* ----- FOOTER CONTAINERS + TEXT STYLES ----- */
+/* FOOTER: creates layout table within div.mainContainer on HOMEPAGE. applied to <table>. */
+table.footerTable {
+    background-color: transparent;
+    font-size: 0.95em;
+    margin: 0 auto 10px auto;
+    width: 860px;
+}
+
+/* FOOTER: creates layout table within SUBPAGES. applied to <table>. */
+#wrapper table.footerTable {
+    background-color: transparent;
+    font-size: 0.95em;
+    margin: 0 auto 10px auto;
+    width: 100%;
+}
+
+/* FOOTER: sets text link alignment within footerContainer. applied to <td>. */
+td.footerTdLinks {
+    padding: 0px;
+    text-align: left;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+/* FOOTER: sets logo alignment within footerContainer. applied to <td>. */
+td.footerTdLogos {
+    padding: 0px 10px;
+    text-align: right;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+/* establishes footer container as table layout within div.mainContainer all pages. */
+div.footerTable {
+    display: table;
+    font-size: 0.95em;
+    margin: 10px;
+    width: 100%;
+}
+
+/* establishes table row to align footer links and footer logos. */
+div.footerTr {
+    display: table-row;
+}
+
+/* sets text link placement within footerContainer. */
+div.footerTdLinks {
+    display: table-cell;
+    padding: 0px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+/* sets logo placement within footerContainer. */
+div.footerTdLogos {
+    display: table-cell;
+    padding: 0px 10px;
+    text-align: right;
+    vertical-align: middle;
+}
+
+/* FOOTER: sets text links within footerTable. applied to <a href="">. */
+.footerTable a[href], .footerTable a[href]:link, .footerTable a[href]:visited {
+    color: #07294B;
+    text-decoration: underline;
+    margin: 0px 3px;
+}
+
+.footerTable a[href]:hover, .footerTable a[href]:active {
+    color: #07294B;
+    text-decoration: none;
+    margin: 0px 3px;
+}
+
+.footerTdLogos img {
+    border: 0px;
+    margin: 0px 5px;
+}
+
+
+/* ----- BUTTON CONTAINER STYLES ----- */
+/* makes an anchor link look like an input button.  applied to <a>. */
+div.buttonContainer a, div.buttonContainer a:link, div.buttonContainer a:visited, 
+a.button, a.button:link, a.button:visited  {
+    background-color: #E6E6E6;
+    background-image: url(../images/bkgd_button.gif);
+    background-repeat: repeat-x;
+    border: 1px solid #666666;
+    color: #000000;
+    font-size: 1.1em;
+    margin: 5px;
+    padding: 5px 25px;
+    text-decoration: none;
+}
+
+/* sets hover style for an anchor link look like an input button.  applied to <a>. */ 
+div.buttonContainer a:hover, div.buttonContainer a:active, 
+a.button:hover, a.button:active {
+    background-color: #AAD7FF;
+    background-image: url(../images/bkgd_button_over.gif);
+    background-repeat: repeat-x;
+    border: 1px solid #0066CC;
+    margin: 5px;
+    text-decoration: none;
+}
+
+/* sets focus style for an anchor link to look like an input button.  applied to <a>. */ 
+div.buttonContainer a:focus, a.button:focus {
+    outline: #99CCFF solid thick;
+}
+/* sets focus style for all anchor links inside the submodal.  applied to <a>. */ 
+.submodalContainer a:focus, a.button:focus {
+    outline: 1px dotted #333;
+}
+
+/* ----- CONTENT CONTAINERS + STYLES ----- */
+/* HOMEPAGE: creates outermost content container between the header + footer. applied to <div>. */
+div.contentContainerHome {
+    background-color: #FFFFFF;
+    border: 1px solid #003366;
+    margin: 0px;
+    *margin-top:-4px; /* IE6 hack */
+    padding: 0px;
+    vertical-align: top;
+}
+
+/* SUBPAGES + SUBMODALS: creates outermost content container between the header + footer.  applied to <div>. */
+div.contentContainer {
+    background-color: #FFFFFF;
+    border: 1px solid #003366;
+    margin: 0px;
+    padding: 10px;
+}
+
+/* HOMEPAGE: creates a layout table for the content, buttons, and main photo. applied to <table>. */
+table.homeTable {
+    border: 0px;
+    display: table;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+/* HOMEPAGE: displays left-hand content within homeTable. applied to <td>. */
+td.homeTdContent {
+    border: 0px;
+    padding: 120px 0 0px 35px;
+    text-align: left;
+    vertical-align: bottom;
+}
+
+/* HOMEPAGE: displays right-hand photo within homeTable. applied to <td>. */
+td.homeTdPhoto {
+    border: 0px;
+    padding: 0px;
+    text-align: right;
+    vertical-align: bottom;
+}
+
+/* HOMEPAGE: creates a layout table for the content, buttons, and main photo. applied to <div>. */
+div.homeTable {
+    border: 0px;
+    display: table;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+/* HOMEPAGE: creates a table row within homeTable.  applied to <div>. */
+div.homeTr {
+    display: table-row;
+}
+
+/* HOMEPAGE: creates a table cell for the left-hand content within homeTable. applied to <div>. */
+div.homeTdContent {
+    border: 0px;
+    display: table-cell;
+    padding: 0 0 0 35px;
+    text-align: left;
+    vertical-align: bottom;
+}
+
+/* HOMEPAGE: creates a table cell for the right-hand photo within homeTable. applied to <div>. */
+div.homeTdPhoto {
+    border: 0px;
+    display: table-cell;
+    padding: 0px;
+    text-align: right;
+    vertical-align: bottom;
+}
+
+/* HOMEPAGE: creates container for placement of textual introductory content. applied to <div>. */
+div.homeContent {
+    margin: 15px 0px;
+    padding: 0px;
+}
+
+/* HOMEPAGE: adjusts margin for list items on the homepage. applies to <li>. */
+div.homeContent li {
+    margin: 0.15em 0em;
+}
+
+/* HOMEPAGE: sets alignment of Create New + Open Saved buttons. applied to <div> */
+div.contentContainerHome div.buttonContainer {
+    display: block;
+    margin: 25px 0px;
+    padding:0px 15px 5px 5px;
+    text-align: left;
+    overflow: hidden;
+    float: left;
+    border-right: 1px solid #663300;
+    width: 280px;
+}
+
+/* HOMEPAGE: sets alignment of Spanish button. applied to <div> */
+div.contentContainerHome div.languagebuttonContainer {
+    display: block;
+    margin: 25px 0px;
+    padding: 0px 5px 5px 9px;
+    text-align: left;
+    overflow: hidden;
+    float: left;
+    width: 150px;
+}
+
+/* HOMEPAGE: sets style for Create New + Open Saved buttons.  applies to <a>. */
+.homeTdContent div.buttonContainer a, 
+.homeTdContent div.buttonContainer a:link, 
+.homeTdContent div.buttonContainer a:visited {
+    background-color: #E29C1B;
+    background-image: url(../images/bkgd_homeButton.gif);
+    background-position: top;
+    background-repeat: repeat-x;
+    border: 1px solid #663300;
+    color: #673400;
+    cursor: hand;
+    display: block;
+    font-size: 1.25em;
+    margin: 10px 0 0 0;
+    padding: 4px 20px;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+/* HOMEPAGE: sets style for Language button.  applies to <a>. */
+.homeTdContent div.languagebuttonContainer a, 
+.homeTdContent div.languagebuttonContainer a:link, 
+.homeTdContent div.languagebuttonContainer a:visited {
+    background-color: #1d4157;
+    background-image: url(../images/bkgd_homeSpanishButton.gif);
+    background-position: top;
+    background-repeat: repeat-x;
+    border: 1px solid #1d4157;
+    color: #DAEFFB;
+    cursor: hand;
+    display: block;
+    font-size: 1.25em;
+    margin: 10px 0px 0 5px;
+    padding: 4px 18px;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+/* HOMEPAGE: sets style for Create New + Open Saved and Language buttons.  applies to <a>. */
+.homeTdContent div.buttonContainer a:hover, 
+.homeTdContent div.buttonContainer a:active, 
+.homeTdContent div.buttonContainer a:focus,
+.homeTdContent div.languagebuttonContainer a:hover, 
+.homeTdContent div.languagebuttonContainer a:active, 
+.homeTdContent div.languagebuttonContainer a:focus{
+    background-image: url(../images/bkgd_button_over.gif);
+    outline: #FFFF99 solid thick;
+    background-color:#76c4ff;
+    color: #000000
+}
+
+/* HOMEPAGE: sets style for Create New + Open Saved buttons.  applies to <input type="button">. */
+div.contentContainerHome input[type=button] {
+    background-color: #E29C1B;
+    background-image: url(../images/bkgd_homeButton.gif);
+    background-position: left;
+    background-repeat: repeat-x;
+    border: 1px solid #663300;
+    color: #673400;
+    cursor: hand;
+    font-size: 1.25em;
+    margin: 10px 0px;
+    overflow: visible;
+    padding: 4px 20px;
+    width: 270px;
+}
+
+/* HOMEPAGE: creates container for middle orange box + textual content. applied to <div>. */
+div.orangeBox {
+    background-color: #E29C1B;
+    border: 0px;
+    color: #FFFFFF;
+    font-size: 0.92em;
+    margin: 0px;
+    padding: 3px 10px;
+} 
+
+div.orangeBox p {
+    margin: 0.7em 0em 0.5em 0em; 
+}
+
+/* HOMEPAGE: sets basic style for text links within div.orangeBox. applies to <a href="">. */
+div.orangeBox a:link, div.orangeBox a:visited {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+/* HOMEPAGE: sets hover style for text links within div.orangeBox. applies to <a href="">. */
+div.orangeBox a:hover, div.orangeBox a:active {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/* HOMEPAGE: creates container box for family photos along bottom of homepage. applied to <div>. */
+div.photoBox {
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    text-align: left;
+}
+
+/* HOMEPAGE: sets style on images within div.photoBox. applies to <img>. */
+div.photoBox img{
+    border: 0px;
+    margin: 0px;
+}
+
+/* HOMEPAGE + SUBPAGES: sets center placement of and creates a no outline around various components (navigational tree, history reports, etc.) within the page. applied to <div>. */
+div.centerBox {
+    border: 0px;
+    margin: 20px 0px 10px 0px;
+    padding: 10px;
+    text-align: center;
+    vertical-align: top;
+}
+
+/* HOMEPAGE + SUBPAGES: sets center placement of and creates a grey outline around various components (navigational tree, history reports, etc.) within the page. applied to <div>. */
+div.outlineBox {
+    border: 1px solid #CCCCCC;
+    margin: 20px 0px 10px 0px;
+    padding: 10px;
+    text-align: center;
+    vertical-align: top;
+}
+
+
+/* ----- BUTTON + SUB-NAVIGATION CONTAINERS + STYLES ----- */
+/* SUBPAGES: sets alignment of Save, Cancel, etc. buttons.  applied to <div>. */
+div.buttonContainer {
+    margin: 10px;
+    padding: 10px 20px;
+    text-align: center;
+    /*width: 100%;*/
+}
+
+/* SUBPAGES: sets alignment of subnav icons. used mainly on View Report page.  applied to <div>. */
+div.subnavContainer {
+    margin: 5px 10px;
+    padding: 5px 20px;
+    text-align: right;
+    max-width: 1152px;
+    /*width: 100%;*/
+}
+
+/* SUBPAGES: sets link style on images within subnavigation. */
+div.subnavContainer a, div.subnavContainer a:link, div.subnavContainer a:visited {
+    border: 1px solid #E2E2E2;
+    margin: 0px 5px;
+    padding: 0px;
+}
+
+/* SUBPAGES: sets hover style on images within subnavigation. */
+div.subnavContainer a:hover, div.subnavContainer a:active {
+    border: 1px solid #60A6D2;
+}
+
+/* SUBPAGES: sets hover style on images within subnavigation. */
+div.subnavContainer a:focus {
+    outline: #99CCFF solid thick;
+}
+
+
+/* ****************************************************************** */
+/* ----- SUBMODAL + POPUP + DIALOGUE LAYOUT CONTAINERS + STYLES ----- */
+/* ****************************************************************** */
+
+/* POPUP: adjusts body settings specifically for popups. applied to <body> */
+body.popup {
+    background: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 86%;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+/* POPUP: creates main container for content within Help popup window. applied to <div>. */
+div.helpContainer {
+    background-color: #FFFFFF;
+    margin: 0px;
+    padding: 0px;
+    text-align: left;
+    vertical-align: top;
+    border: 1px solid #096B93;
+    width: 100%
+}
+
+/* POPUP: creates banner at top of Help popup window within helpContainer.  applied to <div>. */
+div.bannerPopup {
+    background-color: #E29C1B;
+    border-bottom: 1px solid #003366;
+    height: 38px;
+    margin: 0px;
+    padding: 0px;
+    text-align: left;
+    width: 100%;
+} 
+
+
+/* POPUP: creates titlebar at top of Help popup window within helpContainer.  applied to <div>. */
+div.helpTopTitlebar {
+//    border-top: 1px solid #003366;
+    border-bottom: 1px solid #003366;
+    color: #003366;
+    margin: 0px;
+    padding: 5px;
+    text-align: right;
+}
+
+/* POPUP: creates titlebar at bottom of Help popup window within helpContainer.  applied to <div>. */
+div.helpBottomTitlebar {
+    border-top: 1px solid #003366;
+    color: #003366;
+    margin: 0px;
+    padding: 5px;
+    text-align: right;
+}
+
+/* POPUP: creates style for text link within helpTitlebar.  applies to <a>. */
+.helpTitlebar a, .helpTitlebar a:link, .helpTitlebar a:visited {
+    color: #119DBB;
+    text-decoration: none;
+}
+
+/* POPUP: creates hover style for text link within helpTitlebar.  applies to <a>. */
+.helpTitlebar a:hover, .helpTitlebar a:active {
+    color: #009900;
+    text-decoration: underline;
+}
+
+/* POPUP: creates container for content below helpTitlebar within Help popup window.  applied to <div>. */
+div.helpContentContainer {
+    margin: 0px;
+    padding: 10px;
+    text-align: left;
+    vertical-align: top;
+    width: 97%;
+}
+
+/* SUBMODAL: adjusts body settings specifically for submodals. applied to <body> */
+body.submodal {
+    background: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 86%;
+    padding: 0px;
+    text-align: center;
+    min-width:600px;
+}
+
+/* SUBMODAL: sets submodal container so everything on the submodal (titlebar, expand/collapse bars, and content) can be grouped and centered on screen. applied to <div> */
+div.submodalContainer {
+    background-color: #FFFFFF;
+    border: 1px solid #003366;
+    margin: 0px;
+    padding: 0px;
+    text-align: left;
+    vertical-align: top;
+    width: 100%;
+    /*max-width: 720px;*/
+}
+
+/* SUBMODAL: creates layout table for the title bar. applied to <table>. */
+table.submodalTitlebarTable {
+    background-color: #FFCC00;
+    border-bottom: 1px solid #003366;
+    display: table;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+/* SUBMODAL: sets alignment of heading within submodalTitlebarTable.  applied to <td>. */
+td.submodalTitleTd {
+    padding: 2px 10px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+/* SUBMODAL: sets alignment of help & close buttons within submodalTitlebar. */
+td.submodalTitleTdBtn {
+    padding: 2px 10px;
+    text-align: right;
+    vertical-align: middle;
+}
+
+/* SUBMODAL: creates layout table for the titlebar on all submodals */
+div.submodalTitlebar {
+    background-color: #FFCC00; 
+    border-bottom: 1px solid #003366;
+    display: table;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+div.submodalTitleTr {
+    display: table-row;
+}
+
+/* creates table cell for placement of heading within submodalTitlebar. */
+div.submodalTitleTd {
+    display: table-cell;
+    padding: 2px 10px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+/* creates table cell for placement of help & close buttons within submodalTitlebar. */
+div.submodalTitleTdBtn {
+    display: table-cell;
+    padding: 2px 10px;
+    text-align: right;
+}
+
+/* SUBMODAL: sets style on close & other buttons within the submodalTitlebar. */
+.submodalTitleTdBtn img, .submodalTitleTdBtn a img {
+    border: 0px;
+    margin: 0px 2px;
+    vertical-align: middle;
+}
+
+/* SUBMODAL: sets header text within submodalTitleTd. */
+.submodalTitleTd h1 {
+    color: #000000;
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 1.3em;
+    font-style: normal;
+    font-weight: bold;
+    margin: 0px;
+}
+
+/* SUBMODAL: sets container for accordianTitlebar & accordianContent */
+div.accordianContainer {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* SUBMODAL: sets table layout for OPENED accordianTitlebar within accordianContainer. applied to <table>. */
+div.accordianContainer table.accordianTitlebarOpened {
+    background-color: #A7E5F4;
+    background-image: url(../images/bkgd_accNavOpened.gif);
+    background-repeat: repeat-x;
+    border-top: 1px solid #003366;
+    border-bottom: 1px solid #003366;
+    margin: 0px 0px 2px 0px;
+    width: 100%;
+}
+
+/* SUBMODAL: sets table layout for CLOSED accordianTitlebar within accordianContainer. applied to <table>. */
+div.accordianContainer table.accordianTitlebarClosed {
+    background-color: #CDE7ED;
+    background-image: url(../images/bkgd_accNavClosed.gif);
+    background-repeat: repeat-x;
+    border-top: 1px solid #6383B8;
+    border-bottom: 1px solid #6383B8;
+    margin: 0px 0px 2px 0px;
+    width: 100%;
+}
+
+/* SUBMODAL: sets table cell container for text heading within accordianTitlebar table. applied to <td>. */
+td.accordianTitleTd {
+    border-left: 1px solid #CAEFFE;
+    border-right: 1px solid #4E9DC9;
+    padding: 2px 10px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+/* SUBMODAL: sets table cell container for Get Help link within accordianTitlebar table. applied to <td>. */
+td.accordianTitleTdBtn {
+    padding: 0px;
+    text-align: right;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+/* SUBMODAL: creates Get Help button within OPENED accordianTitlebar. applies to <a> within <td class="accordianTitleTdBtn">. */
+table.accordianTitlebarOpened td.accordianTitleTdBtn a {
+    display: inline-block;
+    background-color: #A7E5F4;
+    background-image: url(../images/bkgd_accNavOpened.gif);
+    background-repeat: repeat-x;
+    border-left: 1px solid #CAEFFE;
+    border-right: 1px solid #4E9DC9;
+    color: #003366;
+    font-size: 1.0em;
+    font-weight: normal;
+    margin: 0px;
+    padding: 2px 20px;
+    text-decoration: none;
+}
+
+/* SUBMODAL: creates Get Help button within CLOSED accordianTitlebar. applies to <a> within <td class="accordianTitleTdBtn">. */
+table.accordianTitlebarClosed td.accordianTitleTdBtn a {
+    display: inline-block;
+    background-color: #CDE7ED;
+    background-image: url(../images/bkgd_accNavClosed.gif);
+    background-repeat: repeat-x;
+    border-left: 1px solid #DEEDEF;
+    border-right: 1px solid #7296BB;
+    color: #003366;
+    font-size: 1.0em;
+    font-weight: normal;
+    margin: 0px;
+    padding: 2px 20px;
+    text-decoration: none;
+}
+
+/* SUBMODAL: sets basic style for Get Help link within accordianTitleTdBtn. applies to <a href="">. */ 
+td.accordianTitleTdBtn a:link, td.accordianTitleTdBtn a:visited {
+    color: #003366;
+    text-decoration: none;
+}
+
+/* SUBMODAL: sets hover style for Get Help link within OPENED accordianTitlebar.  applies to <a href=""> within <td class="accordianTitleTdBtn">. */
+table.accordianTitlebarOpened td.accordianTitleTdBtn a:hover, 
+table.accordianTitlebarOpened td.accordianTitleTdBtn a:active {
+    background-image: url(../images/bkgd_accNavOpened_over.gif);
+    background-repeat: repeat-x;
+    text-decoration: none;
+}
+
+/* SUBMODAL: sets hover style for Get Help link within CLOSED accordianTitlebar.  applies to <a href=""> within <td class="accordianTitleTdBtn">. */
+table.accordianTitlebarClosed td.accordianTitleTdBtn a:hover, 
+table.accordianTitlebarClosed td.accordianTitleTdBtn a:active {
+    background-image: url(../images/bkgd_accNavClosed_over.gif);
+    background-repeat: repeat-x;
+    text-decoration: none;
+}
+
+/* SUBMODAL: sets basic header text within OPENED accordianTitlebar. */
+table.accordianTitlebarOpened td.accordianTitleTd h2 {
+    color: #003366;
+    display: inline;
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 1.0em;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* SUBMODAL: sets header link within OPENED accordianTitlebar. */
+table.accordianTitlebarOpened td.accordianTitleTd h2 a, 
+table.accordianTitlebarOpened td.accordianTitleTd h2 a:link, 
+table.accordianTitlebarOpened td.accordianTitleTd h2 a:visited, 
+table.accordianTitlebarOpened td.accordianTitleTd h2 a:hover, 
+table.accordianTitlebarOpened td.accordianTitleTd h2 a:active {
+    color: #003366;
+    text-decoration: none;
+}
+
+/* SUBMODAL: sets basic header text within CLOSED accordianTitlebar. */
+table.accordianTitlebarClosed td.accordianTitleTd h2 {
+    color: #396B9D;
+    display: inline;
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 1.0em;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* SUBMODAL: sets header link within CLOSED accordianTitlebar. */
+table.accordianTitlebarClosed td.accordianTitleTd h2 a, 
+table.accordianTitlebarClosed td.accordianTitleTd h2 a:link, 
+table.accordianTitlebarClosed td.accordianTitleTd h2 a:visited, 
+table.accordianTitlebarClosed td.accordianTitleTd h2 a:hover,  
+table.accordianTitlebarClosed td.accordianTitleTd h2 a:active {
+    color: #396B9D;
+    text-decoration: none;
+}
+
+/* sets (click to show/hide) text within accordianTitlebar. applied to <span> */
+.showHideText {
+    color: #333333;
+    font-size: 0.9em;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/* sets (click to show/hide) link within accordianTitlebar.  applied to <a> within <span class="showHideText"> */
+.showHideText a, .showHideText a:link, .showHideText a:visited {
+    color: #333333;
+    text-decoration: none;
+}
+
+.showHideText a:hover, .showHideText a:active {
+    color: #333333;
+    text-decoration: none;
+}
+
+/* sets content area within an accordian section. */
+div.accordianContent {
+    padding: 5px 10px 20px 10px;
+}
+
+/* sets alignment of Save, Cancel, etc. buttons within a submodal. */
+div.submodalContainer div.buttonContainer {
+    margin: 5px 10px 10px 10px;
+    padding: 10px 40px;
+    text-align: right;
+}
+
+/* ------- Modified 01/11/2010 - SAVE WIZARD PROCESS ------- */
+a.toggledisplay 
+{  background:url("../images/ico_plus.gif") no-repeat 0 3px; padding:0 0 0 12px; }
+#process_steps
+{ margin:10px auto; width:500px; height:50px; text-align:center; font-weight:bold }
+.process_step_selected, .process_step
+{ background:#60bed2 url("../images/bg_gradient_blue.gif") repeat-x;  float:left; width:195px; padding:7px; text-align:center; border:2px solid #036; color:#fff; margin-right:15px; }
+.process_arrow_right
+{ float:left; padding:7px; width:10px; margin-right:15px; }
+.process_step
+{ background:#eee; border:2px solid #ccc; color:#ccc;  }
+.clear
+{ clear:both; }
+.box_noshade
+{ border-top:1px solid #7bbcca; padding:15px 0 0 0; margin:-10px 0 10px 0; min-width:750px; }
+
+* html #wrapper /* IE6 min-width dynamic expression (hack) */
+{ width:expression(document.body.clientWidth <=750 ? "750px" : "100%" ); }
+
+.box_noshade H2
+{ margin:5px 0 10px 0; font-size:120%;  }
+.box_noshade P, .colOne P, .colTwo P, .loginstatus P
+{ margin:0 0 10px 0; font-size:12px; line-height:1.4em; }
+.box_noshade UL
+ { margin-left:0; padding-left:16px;}
+.box_noshade LI
+{ font-size:12px; padding-bottom:5px;}
+.box_noshade .thumb
+{ float:left; min-width:160px; }
+.box_noshade .thumb_content
+{ float:left; width:75%; }
+.box_noshade .btn_float
+{ float:left; width:260px;  }
+.btn_right
+{ float:right; width:470px; } 
+.btn_right .btn_float
+{ width:210px; padding:10px 0; }
+.box_noshade .btn_float_right
+{ float:right; width:300px; margin-top:-10px; padding-top:10px; padding-bottom:10px; padding-right:20px;  }
+.float_right
+{ float:right; width:300px; margin-top:-10px; padding-top:10px; padding-bottom:10px; padding-right:20px;  }
+.box_noshade .text_float
+{ float:left; width:280px; white-space:nowrap; padding:0; margin:0 }
+/* sets alignment of Save, Cancel, etc. buttons within a gray box within a submodal. */
+div.submodalContainer .box_noshade div.buttonContainer 
+{   width:94%; text-align:left; margin: 0; padding: 10px 40px 10px 0;  }
+div.buttonContainer A
+{ white-space:normal }
+P.small
+{ font-size:78%; padding-top:0; }
+.nopad
+{ padding:0 }
+.float_right
+{ float:right; margin:0; padding:0 }
+.box_noshade P.alignright
+{ padding-right:90px; text-align:right }
+.colOne H2, .colTwo H2
+{ font-size:120%; margin:5px 0 10px 0; }
+IMG.float_ico
+{ float:left; padding-right:8px; padding-bottom:150px }
+div.submodalContainer .colOne div.buttonContainer, div.submodalContainer .colTwo div.buttonContainer 
+{ float:left; padding:10px 0; margin:-5px 0 0 -4px; }
+div.long_buttonCentered
+{ padding-right:25%; }
+div.buttonCentered
+{ width:10em; margin:0 auto; }
+.box_float_inner
+{ float:left; width:60%; }
+.box_float_inner .thumb_content
+{ width:60%;}
+.box_hilite
+{ background:#eee url("../images/bg_gradient.gif") repeat-x top; border:1px solid #ccc; float:right; width:240px; padding:15px 15px 0 15px; }
+.box_hilite H3
+{ font-size:100%; margin-top:0; color:#036; }
+.box_hilite LI, .box_hilite P
+{ font-size:78%; color:#036; }
+.loginstatus
+{ background:#ffd url("../images/bg_gradient_yellow.gif") repeat-x top; padding:15px; margin:10px 10px 20px 10px; border:1px solid #fc0; }
+.loginstatus P
+{ margin-bottom:0 }
+IMG.float_ico_small
+{ float:left; width:40px; height:38px; margin-top:-7px }
+.box_noshade .centered
+{ text-align:center }
+
+
+
+
+/* ************************************************* */
+/* ----- FORM & DATA TABLE CONTAINERS + STYLES ----- */
+/* ************************************************* */
+
+/* creates colored container for basic forms on subpages. */
+div.formBox {
+    background-color: #FFF0B5;
+    border: 1px solid #666666;
+    margin: 20px 0px 10px 0px;
+    padding: 5px;
+}
+
+table.form {
+    background-color: transparent;
+}
+
+table.form tr {
+    vertical-align: top;
+}
+
+table.form th {
+    padding: 3px 5px;
+    text-align: left;
+    vertical-align: top;
+}
+
+/* aligns text within <th> to the left.  applied to <th>. */
+table.form th.left {
+    padding: 3px 5px;
+    text-align: left;
+    vertical-align: top;
+}
+
+table.form td {
+    padding: 3px 5px;
+    text-align: left;
+    vertical-align: top;
+}
+
+table.form td.colspan {
+    padding: 3px 5px 6px 5px;
+    text-align: left;
+    vertical-align: top;
+}
+
+/* displays a standard <td> as if it were a <th>. use this style when a <th> is not the accurate way to go for accessibility purposes.  applied to <td>. */
+td.tdLabel, .tdLabel, td.th {
+    font-weight: bold;
+    padding: 3px 5px;
+    text-align: left;
+    vertical-align: top;
+}
+
+/* displays a standard <td> as if it were a left-aligned <th>. use this style when a <th> is not the accurate way to go for accessibility purposes AND the text needs to align to the left of the table cell.  applied to <td>. */
+td.tdLabelLeft, .tdLabelLeft, td.thLeft {
+    font-weight: bold;
+    padding: 3px 5px;
+    text-align: left;
+    vertical-align: top;
+}
+
+tr.raceEthnicity th {
+    padding: 3px 5px;
+    text-align: left;
+    vertical-align: top;
+}
+
+tr.raceEthnicity td {
+    padding: 3px 5px;
+    text-align: left;
+    vertical-align: top;
+}
+
+/* used mainly to highlight the table row with an inline error message.  applied to <tr>. */
+tr.highlight {
+}
+
+/* used mainly to highlight the table cell that contains an inline error message.  applied to <td>. */
+tr.highlight td {
+    border: 1px solid red;
+}
+
+/* used mainly to highlight the data field with its associated inline error message.  applied to <input>. */
+tr.highlight td input {
+    background-color: #FFFFCC;
+}
+
+/* creates a container for dynamically displayed form suboptions. */
+div.dynamicPanel {
+    margin: 5px 0px;
+    white-space: normal;
+}
+
+/* sets style for basic sub-options table layout within the form layout. */
+table.subOptions {
+}
+
+/* sets style for table heading within sub-options table layout. */
+table.subOptions th {
+    font-weight: bold;
+    text-align: left;
+}
+
+/* sets style for form labels within sub-options table layout. */
+table.subOptions label {
+    font-weight: bold;
+}
+
+table.raceEthnicitySubOptions {
+    margin-left: 12px;
+}
+
+/*
+td label {
+    font-weight: normal;
+}
+*/
+
+/* sets font size for text input fields. */
+input[type="text"] {
+    font-size: 0.95em;
+}
+
+input[type="button"], button {
+    margin: 5px;
+    padding: 5px 25px;
+}
+
+/* sets basic style for input buttons that are within a form table... not in <div class="buttonContainer">. applies to <input> */
+table.form td input[type="button"], table.form td button {
+    background-color: #E6E6E6;
+    background-image: url(../images/bkgd_button.gif);
+    background-repeat: repeat-x;
+    border: 1px solid #666666;
+    color: #000000;
+    font-size: 0.95em;
+    margin: 5px;
+    padding: 3px 15px;
+    text-decoration: none;
+}
+
+/* sets hover style for input buttons that are within a form table... not in <div class="buttonContainer">. applies to <input> */
+table.form td input[type="button"]:hover, table.form td input[type="button"]:active, 
+table.form td button:hover, table.form td button:active {   
+    padding: 0px 5px;
+    background-color: #AAD7FF;
+    background-image: url(../images/bkgd_button_over.gif);
+    background-repeat: repeat-x;
+    border: 1px solid #0066CC;
+    margin: 5px;
+    text-decoration: none;
+}
+
+/* sets focus style for input buttons that are within a form table... not in <div class="buttonContainer">. applies to <input> */
+table.form td input[type="button"]:focus, 
+table.form td button:focus {
+    outline: 2px solid #99CCFF;
+}
+
+/* makes an anchor link within a form table cell look like an input button.  apply class="buttonContainer" to the <td> that contains the anchor link. */
+table.form td.buttonContainer a:link, table.form td.buttonContainer a:visited  {
+    background-color: #E6E6E6;
+    background-image: url(../images/bkgd_button.gif);
+    background-repeat: repeat-x;
+    border: 1px solid #666666;
+    color: #000000;
+    font-size: 0.95em;
+    margin: 5px;
+    padding: 3px 15px;
+    text-decoration: none;
+}
+
+
+/* sets hover style for anchor links within a form table cells that look like an input button.  apply class="buttonContainer" to the <td> that contains the anchor link. */
+table.form td.buttonContainer a:hover, table.form td.buttonContainer a:active  {
+    background-color: #AAD7FF;
+    background-image: url(../images/bkgd_button_over.gif);
+    background-repeat: repeat-x;
+    border: 1px solid #0066CC;
+    margin: 5px;
+    text-decoration: none;
+}
+
+/* sets focus style for anchor links within a form table cells that look like an input button.  apply class="buttonContainer" to the <td> that contains the anchor link. */
+table.form td.buttonContainer a:focus {
+    outline: 2px solid #99CCFF;
+} 
+
+/* sets style for basic data table listing. applied to <table>. */
+table.dataListing, table.dataListing1 {
+    background-color: #FFFFFF;
+    margin: 0px;
+    width: 100%;
+}
+
+/* sets style for a data table (.dataListing). applied to <table>. */
+.datatableWrapper {  
+    border: 1px solid #666666;
+    width: 80%;
+    margin:0 auto;
+    min-width: 670px;
+    max-width: 800px;
+    border-collapse: collapse;
+}
+
+/* sets style for a data table  (.dataListing). applied to <table>. */
+.datatableWrapper td.datatableWrapperInner {
+    padding:0;
+}
+
+/* sets style for basic table heading element within <table class="dataListing">. apllies to <th>. */
+table.dataListing th {
+    background-color: #FFE060;
+    border-bottom: 1px solid #666666;
+    border-right:1px solid #666666;
+    color: #000000;
+    font-weight: bold;
+    margin: 0px;
+    padding: 5px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* sets style for basic table heading element within <table class="dataListing">. apllies to <th>. */
+table.dataListing1 th {
+    background-color: #FFE060;
+    border: 1px solid #666666;
+    color: #000000;
+    font-weight: bold;
+    margin: 0px;
+    padding: 5px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* forces the text within the <th> to remain on one line & not wrap. applies to <th>. */
+th.nowrap {
+    white-space: nowrap;
+}
+
+/* sets a uniform with for action column in table. applies to <th>. */
+th.actionth {
+    width:7em;
+}
+
+
+/* sets style for basic table data cell within <table class="dataListing">. applied to <td>. */
+table.dataListing td {
+    border-top: 1px solid #EFEFEF;
+    border-bottom: 1px solid #AEAEAE;
+    border-right:1px solid #AEAEAE;
+    font-weight: normal;
+    margin: 0px;
+    padding: 2px 5px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+/* sets style for basic table data cell within <table class="dataListing">. applied to <td>. */
+table.dataListing1 td {
+    border: 1px solid #AEAEAE;
+    font-weight: normal;
+    margin: 0px;
+    padding: 2px 5px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+/* sets style on a table row that is used as a section heading for a group of data, specifically for the family navigation data table.  applied to <td>. */
+table.dataListing td.sectionHead {
+    background: #666666 url(../images/bkgd_sectionHead.gif) repeat-x center; /*#1DC5EB;*/
+    color: #FFFFFF;
+    border-top: 1px solid #AEAEAE;
+    border-bottom: 1px solid #AEAEAE;
+    font-weight: bold;
+    padding: 5px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+/* highlights the proband within the family navigation data table. applied to <tr> and inherited by <td>. */
+table.dataListing tr.proband td {
+    background-color: #FFFFCC;
+    font-weight: bold;
+}
+
+/* corrects alignment and spacing of extra tables generated by struts within the dataListing <td>. applied to <tr> and inherited by the embedded <table>. */
+table.dataListing tr.relative td table, table.dataListing tr.proband td table {
+    display: inline-table;
+    border: 0px;
+    margin: 0px;
+}
+
+/* corrects alignment and spacing of extra tables generated by struts within the dataListing <td>. applied to <tr> and inherited by the embedded table's <td>. */
+table.dataListing tr.relative td table td, table.dataListing tr.proband td table td {
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* sets alignment of text and icons within the action columns of a data listing.  applied to <colgroup> and/or <td>. */
+table.dataListing td.action, table.dataListing .action {
+    text-align: center;
+}
+
+.action a:link, .action a:visited {
+    color: #0000FF;
+    text-decoration: underline;
+}
+
+.action a:hover, .action a:active {
+    color: #0000FF;
+    text-decoration: none;
+}
+
+/* sets style for a side-by-side (two column) table layout. */
+.twoCol { 
+    border-collapse: collapse;
+    margin:10px 0;
+    min-width:600px;
+}
+
+/* sets style for the first TD within a side-by-side (two column) table layout. */
+.twoCol .colOne { 
+    padding:0 15px 15px 15px;
+    width:50%;
+    vertical-align:top;
+    border-right: 1px solid #b3d9e1
+}
+
+/* sets style for the second TD within a side-by-side (two column) table layout. */
+.twoCol .colTwo { 
+    padding:0 15px 15px 15px;
+    vertical-align:top;
+}
+
+
+/* sets style for a side-by-side (two column) table layout. */
+.twoColSimple { 
+    border-collapse: collapse;
+}
+
+/* sets style for the first TD within a side-by-side (two column) table layout. */
+.twoColSimple .colOneSimple { 
+    padding:0 15px 0px 15px;
+    width:50%;
+    vertical-align:top;
+    border-right: 1px solid #b3d9e1
+}
+
+/* sets style for the second TD within a side-by-side (two column) table layout. */
+.twoColSimple .colTwoSimple { 
+    padding:0 15px 0px 15px;
+    vertical-align:top;
+}
+
+
+
+/* ******************************************** */
+/* ----- HEALTH HISTORY FORM TABLE STYLES ----- */
+/* ******************************************** */
+
+#healthHistoryTable { 
+    border:1px solid #000; 
+    width:98%;
+    margin:-10px auto 20px auto;
+    min-width:600px;
+} 
+
+#healthHistoryTableForm, #healthHistoryTableList { 
+    border-collapse: collapse;
+}
+
+#healthHistoryTableForm {
+    background-color: #FFF0B5;
+}
+
+#healthHistoryTableForm td, #healthHistoryTableList th, #healthHistoryTableList td { 
+    border-right: 1px solid #999;
+    border-top: 1px solid #999;
+}
+
+#healthHistoryTableForm td {
+    vertical-align: bottom;
+}
+
+#healthHistoryTableForm td.buttonContainer {
+    padding:0 0 8px 0;
+    text-align: center;
+}
+
+#healthHistoryTableList td {
+    padding:8px 5px
+}
+
+#healthHistoryTableList td.buttonContainer {
+    padding:8px 0 8px 0;
+    text-align: center;
+}
+
+.diseaseCol {
+    width:45%
+}   
+
+.ageCol {
+    width:40%
+}
+
+.actionCol { 
+    width:15%
+}
+
+#healthHistoryTableForm td .healthHistoryTableSelect
+{ padding:8px 3px; }
+
+/* makes an L shaped icon that appears next to select options that dynamically appear based on a previous selection */
+#healthHistoryTableForm td .moreoptionsrow {
+    padding-left: 16px;
+    background: url("../images/ico_specify.gif") no-repeat 4px 3px;
+}
+
+/* makes an anchor link within the health history form table cell look like an input button.  apply class="buttonContainer" to the <td> that contains the anchor link. */
+#healthHistoryTableForm td.buttonContainer a:link, #healthHistoryTableForm td.buttonContainer a:visited, #healthHistoryTableList td.buttonContainer a:link, #healthHistoryTableList td.buttonContainer a:visited  {
+    background-color: #E6E6E6;
+    background-image: url(../images/bkgd_button.gif);
+    background-repeat: repeat-x;
+    border: 1px solid #666666;
+    color: #000000;
+    font-size: 0.95em;
+    margin: 0 auto;
+    padding: 3px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    width:4em;
+    text-align: center;
+    display: block; 
+}
+
+/* sets hover style for anchor links within the health history form table cells that looks like an input button.  apply class="buttonContainer" to the <td> that contains the anchor link. */
+#healthHistoryTableForm td.buttonContainer a:hover, #healthHistoryTableForm td.buttonContainer a:active  {
+    background-color: #AAD7FF;
+    background-image: url(../images/bkgd_button_over.gif);
+    background-repeat: repeat-x;
+    border: 1px solid #0066CC;
+    margin: 0 auto;
+    text-decoration: none;
+}
+
+/* puts the copy to/from health vault button using the same settings as buttonContainer */
+.hvButtonContainer {
+    margin-right: 2px;
+}
+
+/* aligns the healthvault button to the right when inside .hvButtoncontainer  */
+.hvButtonContainer .btn_float_right {
+    float: right;
+    width: 190px;
+    
+}
+
+
+
+/* ******************************** */
+/* ----- MISCELLANEOUS STYLES ----- */
+/* ******************************** */
+
+/* sets text to bold. */
+.bold {
+    font-weight: bold;
+}
+
+/* used mainly to set style on asterick used to indicate required information within data forms. applied to <span>. */
+.required {
+    color: #FF0000;
+    font-weight: bold;
+}
+
+/* used mainly to set style on inline error messages for required data fields. applied to <div>. */
+.errorMessage {
+    color: #FF0000;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+/* used mainly to set color on heading within Alert messages. applied to <h1>, <h2>, or <span>. */
+.red, .alert {
+    color: #CC0000;
+}
+
+/* used mainly to set color on heading within Success messages. applied to <h1>, <h2>, or <span>. */
+.green, .success {
+    color: #009900;
+}
+
+/* used mainly to set color on sample form field data entry format. applied to <span>. */
+.gray, .grey, .example {
+    color: #808080; 
+}
+
+/* creates a paragraph with 1/2 the normal <p> element margin.  applied to <p> or <div>. */
+.p {
+    margin: 0.8em 0em 0.5em 0em; /*5px 0px;*/
+}
+
+/* applies style to a large icon image. applied to <img> */
+.largeIcon {  
+    margin:0px 10px 5px 0px;
+    padding:0;  
+    height: 65px;
+    border:0;
+}
+
+/* applies style to a large icon image. applied to <a> */
+a.largeIcon {  
+    margin: 0px 10px 5px 0px;
+    padding: 0;  
+    border: 0;
+    display: block;
+    width: 147px;
+    float: left    
+}
+
+/* applies style to an h4 when an icon is floated next to it */
+h4.h4_with_icon { 
+    float: left;
+    width: 200px 
+}
+
+/* aligns Personal Info stats on report page.  applied to <span> or <div>. */
+.stats {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* sets the style for OR when between two form input groups.  applied to <span>. */
+span.or {  
+    font-size:11px;
+    padding:5px;
+    margin:0 20px;
+    font-weight: bold;
+    background:#FFE060;
+    -moz-border-radius:10px; -webkit-border-radius:10px; border-radius:10px;
+}
+
+/* makes a struts submit button look consistent with all other input buttons.  applies to <s:submit cssClass="enableEnterSubmit" />.  */
+/* This is the same style used for <a> within div.buttonContainer listed below.  */
+div.buttonContainer .enableEnterSubmit, 
+div.buttonContainer .enableEnterSubmit:link, 
+div.buttonContainer .enableEnterSubmit:visited {
+    background-color: #E6E6E6;
+    background-image: url(../images/bkgd_button.gif);
+    background-repeat: repeat-x;
+    border: 1px solid #666666;
+    color: #000000;
+    font-size: 1.1em;
+    margin: 5px;
+    padding: 5px 25px;
+    text-decoration: none;
+}
+
+/* sets hover style for struts submit buttons to look consistent with all other input buttons.  applies to <s:submit cssClass="enableEnterSubmit" />.  */
+/* This is the same style used for <a> within div.buttonContainer listed below.  */ 
+div.buttonContainer .enableEnterSubmit:hover, 
+div.buttonContainer .enableEnterSubmit:active {
+    background-color: #AAD7FF;
+    background-image: url(../images/bkgd_button_over.gif);
+    background-repeat: repeat-x;
+    border: 1px solid #0066CC;
+    margin: 5px;
+    text-decoration: none;
+}
+
+/* sets focus style for struts submit buttons to look consistent with all other input buttons.  applies to <s:submit cssClass="enableEnterSubmit" />.  */
+/* This is the same style used for <a> within div.buttonContainer listed below.  */ 
+div.buttonContainer .enableEnterSubmit:focus {
+    outline: #99CCFF solid thick;
+}
+
+
+/* highlights all form input fields when they are in focus. */
+/*
+input:focus {
+    outline: thin solid #99CCFF;
+}
+*/
+
+.autocompleter {
+    position: absolute;
+    color: #333333;
+    background-color: #ffffff;
+    border: 1px solid #666666;
+    font-family: Arial;
+    overflow: hidden;
+}
+
+.autocompleter ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.autocompleter li {
+    display: block;
+    white-space: nowrap;
+    cursor: pointer;
+    margin: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 1px solid #fff;
+}
+
+.autocompleter li.selected {
+    background-color: #cef;
+    border-top: 1px solid #9bc;
+    border-bottom: 1px solid #9bc;
+}
+
+/* creates a scrolling box that hides the portion of the diagram so the image doesn't extend beyond the template. applied to <div> */
+.scrollingBox { 
+    width: 99%;
+    height: 420px;
+    overflow: auto;
+    border: 1px solid #666666;
+    margin: 0 auto 10px auto;
+}
+
+/* creates a way to handle wrapping buttons, for example, on the view diagram page. applied to <div> */
+.boxpad div.buttonContainer { 
+    margin:0 auto; 
+    padding:0; 
+    line-height:3em 
+}
+.boxpad div.buttonContainer a {  
+    background-color:#efefef; 
+    white-space:nowrap
+}
+.boxpad div.buttonContainer a:hover { 
+    background-color:#76c4ff; 
+}
+/* creates a way to handle wrapping buttons, for example, on the view diagram page. applied to <div> */
+.boxpad div.buttonContainer { line-height: 2em; }
+.boxpad div.buttonContainer a { white-space: nowrap; display:inline-block; padding: 0 15px; }
+.boxpad div.buttonContainer a:hover { padding: 0 15px; }
+
+/* ******************************** */
+/* -------- PRINTER OUTPUT -------- */
+/* ******************************** */
+
+@media print {
+    /* displays the entire diagram when printed as opposed to a scrolling box */
+    .scrollingBox { 
+        display: block; 
+        width: auto; 
+        height: auto; 
+    }
+    /* hides page elements for print */
+    .buttonContainer, footerTdLinks {
+        display: none;
+    }
+}

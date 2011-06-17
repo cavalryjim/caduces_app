@@ -1,4 +1,6 @@
 CaducesApp::Application.routes.draw do
+  resources :famtrees
+
   resources :people
 
   get "people/new"
